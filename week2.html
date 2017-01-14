@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<title>登录</title>
+	<style type="text/css">
+	    body{
+	    	padding-top: 50px;
+	    }
+	</style>
+</head>
+<body ng-app="myApp">
+	  <div class="container-fluid" style="margin-top: auto;margin-bottom: auto;" ng-controller="myCtrl">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+        	 <form class="form-horizontal" role="form" name="myForm" ng-module="">
+              <div class="form-group">
+                <label for="username" class="col-sm-2 control-label">学号：</label>
+                  <div class="col-sm-10">
+                <input type="text" name="userid" class="form-control" id="userid" placeholder="请输入你的学号" ng-model="userid" required>
+                <span ng-show="myForm.userid.$error.required&&myForm.userid.$dirty" style="color: red;">请填写你的学号</span>
+                </div>
+               </div>
+                <div class="form-group">
+                <label for="username" class="col-sm-2 control-label">密码：</label>
+                  <div class="col-sm-10">
+                <input type="password" name="password" class="form-control" id="userid" placeholder="请输入你的学号" ng-model="password" required>
+                <span ng-show="myForm.password.$error.required&&myForm.userid.$dirty" style="color: red;">请填写你的学号</span>
+                </div>
+               </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button ng-disabled="myForm.userid.$dirty && myForm.userid.$invalid ||
+  myForm.password.$dirty && myForm.password.$invalid" type="button" class="btn btn-default" ng-click="mygo()">登录</button>
+    </div>
+  </div>
+</form>
+        </div>
+      </div>
+   </div>
+</body>
+<script type="text/javascript">
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.userid="";
+     $scope.password="";
+    $scope.mygo=function(){
+      if ($scope.myForm.$valid) {
+      	window.location.href='http://www.baidu.com';
+      	console.log('执行了跳转');
+      }
+    }
+});
+</script>
+</html>

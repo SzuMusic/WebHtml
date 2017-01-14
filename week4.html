@@ -1,0 +1,312 @@
+<!--
+<pre>
+
+                    ,EWWEDEWKE.
+               . :WE       :  .KE.
+               DK ,: :     K, : : E,
+              K   ,K:G     K    EE .W
+            f: .;   KK     W    .W ; Di
+           E.:K ;  t i.    E t D Wj . ,G
+          E .  Ei  G          t  W  jf ::
+         G GE  GDj .; ,;,,,,, :  t ,K .E;j
+         j; fK  E  KK;KKKKKKW,KW  ,W  W  L.
+        E WWE:W.  KKK;KKKKKKW,KKW. , jD f;E
+       L   KW L. KKKK;WKEKKKK,KKKW   Kf .  L
+       DE.  EK  WKKKK;t  KKKK,WKKKK     EK,E
+      E EE.f  .KKKKKKKKKKKKKWKKKKKKE. KWj:i.K
+      Di.K  ..KKKKKKKtKKKKKKKKWGKKKKW   .   K
+     j    ED.KEKKKD   . jKtW,KKE.KEKKK.D;
+     W;   L GKKKiK DK.KK WEE.:W,.KtKKKK :EKK D
+     D, :EE GKK.WK KK WK.EK,:   .WKLKKK  .  .W
+     . KE.  GE;KKK.Kf ;WK,L.E;  KKKWGKK  KWK L
+      K:  . L;EKKKK. K. KED;jE E.KKEKKK E .  :
+            :EKEEKtiKKKL iGG.K.K.KKKKKL  i Gi .
+         D  GWEKGK.KKKKK;KWKtK.K;KKEWKW   GK  ,
+      .GE   GKKKKK; LW,,jKKWK..KKWKEWKK  iK K ,
+      tGKW  GKEKKK , D:, KK;:jtK KKWKEK       :
+     .G;. . GKWKKK. .D;fjK:GLEDW KEKK,W if  ..
+     ,.   L.LKKKLK KWWKK K  K  WLKKKKKG , tKKL
+     K. fKE LKKLKKG.WK W.KWKDE; KKK,EKW   . .W
+     K K.: f EGKKELjD ;; K. Wj EKKKKKK  KD   G
+     :., DEW  KKKKjWK.WKEKEWK  W:KKKK    ;KE
+      K KD  .  KWKKL.iKKKKKKK ;K:EfW       iL
+      j   ;E   .LKKWKWKKKKKKKKWKKKW   W.    D
+       W .LL j   KKKK;KK:KEKKKKKKK.  :.EKK,G
+       . j,D .   .KKKKKKEKWKKK;KK          t
+        K K       .KiKKKWKKWKKDK        G K
+         D          WKKKKKKjKKW; .      :;
+          ;    f               :E.  t   ti
+          t,       K  .j   i;  ;W       t
+            K.    E   K.K  ;i   GK.   Di
+             W.   K   K K  WE  ..K   W.
+            . K. K.    :G  G.W  WK.:K
+                K;    WE.  KD.   jK
+                  EK.   .   . ;WE
+                     .fKKKWDj.
+
+                   code by 周杰伦
+                   wechat  18218277728
+</pre>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>LIKER U首页</title>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link href="images/travel.jpg" type="image/x-icon" rel="shortcut icon">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    <style>
+        .hidden.menu {
+            display: none;
+        }
+
+        .masthead.segment {
+            min-height: 700px;
+            padding: 1em 0em;
+        }
+        .masthead .logo.item img {
+            margin-right: 1em;
+        }
+        .masthead .ui.menu .ui.button {
+            margin-left: 0.5em;
+        }
+        .masthead h1.ui.header {
+            margin-top: 3em;
+            margin-bottom: 0em;
+            font-size: 4em;
+            font-weight: normal;
+        }
+        .masthead h2 {
+            font-size: 1.7em;
+            font-weight: normal;
+        }
+
+        .ui.vertical.stripe {
+            padding: 8em 0em;
+        }
+        .ui.vertical.stripe h3 {
+            font-size: 2em;
+        }
+        .ui.vertical.stripe .button + h3,
+        .ui.vertical.stripe p + h3 {
+            margin-top: 3em;
+        }
+        .ui.vertical.stripe .floated.image {
+            clear: both;
+        }
+        .ui.vertical.stripe p {
+            font-size: 1.33em;
+        }
+        .ui.vertical.stripe .horizontal.divider {
+            margin: 3em 0em;
+        }
+
+        .quote.stripe.segment {
+            padding: 0em;
+        }
+        .quote.stripe.segment .grid .column {
+            padding-top: 5em;
+            padding-bottom: 5em;
+        }
+
+        .footer.segment {
+            padding: 5em 0em;
+        }
+
+        .secondary.pointing.menu .toc.item {
+            display: none;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .ui.fixed.menu {
+                display: none;
+            }
+            .secondary.pointing.menu .item,
+            .secondary.pointing.menu .menu {
+                display: none;
+            }
+            .secondary.pointing.menu .toc.item {
+                display: block;
+            }
+            .masthead.segment {
+                min-height: 350px;
+            }
+            .masthead h1.ui.header {
+                font-size: 2em;
+                margin-top: 1.5em;
+            }
+            .masthead h2 {
+                margin-top: 0.5em;
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+    <div class="ui container">
+        <a class="active item">首页</a>
+        <a class="item">景点</a>
+        <a class="item">酒店</a>
+        <a class="item">个性化推荐</a>
+        <div class="right menu">
+            <div class="item">
+                <a class="ui button">登录</a>
+            </div>
+            <div class="item">
+                <a class="ui primary button">注册</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+    <a class="active item">首页</a>
+    <a class="item">景点</a>
+    <a class="item">酒店</a>
+    <a class="item">个性化推荐</a>
+    <a class="item">登录</a>
+    <a class="item">注册</a>
+</div>
+
+
+<!-- Page Contents -->
+<div class="pusher">
+    <div class="ui inverted vertical masthead center aligned segment">
+
+        <div class="ui container">
+            <div class="ui large secondary inverted pointing menu">
+                <a class="toc item">
+                    <i class="sidebar icon"></i>
+                </a>
+                <a class="active item">主页</a>
+                <a class="item">景点</a>
+                <a class="item">酒店</a>
+                <a class="item">个性化推荐</a>
+                <div class="right item">
+                    <a class="ui inverted button">登录</a>
+                    <a class="ui inverted button">注册</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui text container">
+            <h1 class="ui inverted header">
+                LIKER U出游
+            </h1>
+            <h2>为您提供省钱，省力，好玩的出游方案</h2>
+            <div class="ui huge primary button">Ready GO!</div>
+        </div>
+
+    </div>
+
+    <div class="ui vertical stripe segment">
+        <div class="ui middle aligned stackable grid container">
+            <div class="row">
+                <div class="eight wide column">
+                    <h3 class="ui header">我们帮你挑选最近的好玩景点</h3>
+                    <p>我们根据您提供的位置，实时搜索最近的旅游景点</p>
+                    <h3 class="ui header">我们给你提供最实惠的住宿建议</h3>
+                    <p>我们将根据您提供的住宿要求，价格，</p>
+                </div>
+                <div class="six wide right floated column">
+                    <img src="images/sights1.png" class="ui large bordered rounded image">
+                </div>
+            </div>
+            <div class="row">
+                <div class="center aligned column">
+                    <a class="ui huge button">马上来试试</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ui vertical stripe quote segment">
+        <div class="ui equal width stackable internally celled grid">
+            <div class="center aligned row">
+                <div class="column">
+                    <h3>"这是一个为学生出游而定制的网站"</h3>
+                    <p>LIKE U 首席执行官这样说</p>
+                </div>
+                <div class="column">
+                    <h3>"功能强大，操作简单易懂，我们很看好这个软件"</h3>
+                    <p>
+                        <img src="images/psb.jpg" class="ui avatar image">一名学生这样评价
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui vertical stripe segment">
+        <div class="ui text container">
+            <h3 class="ui header">我们创业的目的</h3>
+            <p>当代大学生群体存在一个现象，各班级凝聚力不强，班级概念严重弱化，该现象严重地影响了学校对于各单位学生的行政管理并会对该学校的学风建设造成阻碍， 与此同时年轻一代的社会群体普遍有着强烈的团队拓展需求。以大学生为例，班级出游和社团出游在大学校园内十分风靡，已有成为各学生团体组织的正式展开工作的必要环节之趋势。很多学生团体在招新或成立之初都有组织出游的强烈诉求，希望借着刚认识的热度尽快地进一步熟悉周围的新成员。
+            </p>
+            <a class="ui large button">详细</a>
+            <h4 class="ui horizontal header divider">
+                <a href="#">我是可爱的分割线</a>
+            </h4>
+            <h3 class="ui header">我们LIKER U的优势</h3>
+            <p>我们创新式地采取了“MENU”模式的操作界面，不用像传统的旅游公司靠用户和公司口头联系，这在市面上仅我们一家，因而我们的线上用户操作体验会非常好。我们会侧重于在活动中表达该团体文化，可以从团体提供的其团队文化相关的logo、标语、共同爱好和相关介绍，从而定制出具有该团体文化色彩团体出游。
+            </p>
+            <a class="ui large button">详细</a>
+        </div>
+    </div>
+
+
+    <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+            <div class="ui stackable inverted divided equal height stackable grid">
+                <div class="three wide column">
+                    <h4 class="ui inverted header">关于我们</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">团队介绍</a>
+                        <a href="#" class="item">app下载</a>
+                        <a href="#" class="item">公众号</a>
+                        <a href="#" class="item">投资赞助</a>
+                    </div>
+                </div>
+
+                <div class="ten wide column">
+                    <h4 class="ui inverted header">招贤纳士</h4>
+                    <p>如果你是一名有梦想且对我们的项目敢兴趣的人，欢迎加入我们的开发团队，联系邮箱</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(document)
+            .ready(function() {
+
+                // fix menu when passed
+                $('.masthead')
+                        .visibility({
+                            once: false,
+                            onBottomPassed: function() {
+                                $('.fixed.menu').transition('fade in');
+                            },
+                            onBottomPassedReverse: function() {
+                                $('.fixed.menu').transition('fade out');
+                            }
+                        })
+                ;
+
+                // create sidebar and attach to menu open
+                $('.ui.sidebar')
+                        .sidebar('attach events', '.toc.item')
+                ;
+
+            })
+    ;
+</script>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">-->
+    <link href="images/logo.jpg" type="image/x-icon" rel="shortcut icon">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+   <!-- <script src="semantic/dist/semantic.min.js"></script>-->
+    <script src="semantic/dist/components/form.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/components/login.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="semantic/dist/components/button.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="semantic/dist/components/form.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="semantic/dist/components/grid.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="semantic/dist/components/header.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="semantic/dist/components/icon.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="semantic/dist/components/image.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="semantic/dist/components/input.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="semantic/dist/components/item.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="semantic/dist/components/message.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="semantic/dist/components/segment.min.css">-->
+    <title>登录</title>
+    <style type="text/css">
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            min-width: 320px;
+            background: #FFF;
+            font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+            font-size: 14px;
+            line-height: 1.4285em;
+            color: rgba(0,0,0,.87);
+        }
+        body {
+            background-color: #DADADA;
+        }
+        body > .grid {
+            height: 100%;
+        }
+        .image {
+            margin-top: -100px;
+        }
+        .column {
+            max-width: 450px;
+        }
+    </style>
+</head>
+<body>
+<div class="ui middle aligned center aligned grid">
+    <div class="column">
+        <h2 class="ui teal image header">
+            <img src="images/logo.jpg" class="image">
+            <div class="content">
+                欢迎来到
+            </div>
+        </h2>
+        <form class="ui large form">
+            <div class="ui stacked segment">
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input type="text" name="email" placeholder="请输入你的学号">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <input type="password" name="password" placeholder="请输入你的密码">
+                    </div>
+                </div>
+                <div class="ui fluid large teal submit button" style="width: 89%">登录</div>
+            </div>
+
+            <div class="ui error message"></div>
+
+        </form>
+
+        <div class="ui message">
+            还没有账号? <a href="#" style="background: 0 0;color: #4183C4;text-decoration: none;">注册</a>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $('.ui.form')
+            .form({
+                fields: {
+                    email: {
+                        identifier  : 'email',
+                        rules: [
+                            {
+                                type   : 'empty',
+                                prompt : '邮箱不能为空'
+                            },
+                            {
+                                type   : 'email',
+                                prompt : '请输入正确的邮箱'
+                            }
+                        ]
+                    },
+                    password: {
+                        identifier  : 'password',
+                        rules: [
+                            {
+                                type   : 'empty',
+                                prompt : '请输入密码'
+                            },
+                            {
+                                type   : 'length[6]',
+                                prompt : '密码长度不能少于6位'
+                            }
+                        ]
+                    }
+                }
+            })
+    ;
+
+</script>
+</html>

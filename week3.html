@@ -1,0 +1,499 @@
+<!--
+<pre>
+
+                    ,EWWEDEWKE.
+               . :WE       :  .KE.
+               DK ,: :     K, : : E,
+              K   ,K:G     K    EE .W
+            f: .;   KK     W    .W ; Di
+           E.:K ;  t i.    E t D Wj . ,G
+          E .  Ei  G          t  W  jf ::
+         G GE  GDj .; ,;,,,,, :  t ,K .E;j
+         j; fK  E  KK;KKKKKKW,KW  ,W  W  L.
+        E WWE:W.  KKK;KKKKKKW,KKW. , jD f;E
+       L   KW L. KKKK;WKEKKKK,KKKW   Kf .  L
+       DE.  EK  WKKKK;t  KKKK,WKKKK     EK,E
+      E EE.f  .KKKKKKKKKKKKKWKKKKKKE. KWj:i.K
+      Di.K  ..KKKKKKKtKKKKKKKKWGKKKKW   .   K
+     j    ED.KEKKKD   . jKtW,KKE.KEKKK.D;
+     W;   L GKKKiK DK.KK WEE.:W,.KtKKKK :EKK D
+     D, :EE GKK.WK KK WK.EK,:   .WKLKKK  .  .W
+     . KE.  GE;KKK.Kf ;WK,L.E;  KKKWGKK  KWK L
+      K:  . L;EKKKK. K. KED;jE E.KKEKKK E .  :
+            :EKEEKtiKKKL iGG.K.K.KKKKKL  i Gi .
+         D  GWEKGK.KKKKK;KWKtK.K;KKEWKW   GK  ,
+      .GE   GKKKKK; LW,,jKKWK..KKWKEWKK  iK K ,
+      tGKW  GKEKKK , D:, KK;:jtK KKWKEK       :
+     .G;. . GKWKKK. .D;fjK:GLEDW KEKK,W if  ..
+     ,.   L.LKKKLK KWWKK K  K  WLKKKKKG , tKKL
+     K. fKE LKKLKKG.WK W.KWKDE; KKK,EKW   . .W
+     K K.: f EGKKELjD ;; K. Wj EKKKKKK  KD   G
+     :., DEW  KKKKjWK.WKEKEWK  W:KKKK    ;KE
+      K KD  .  KWKKL.iKKKKKKK ;K:EfW       iL
+      j   ;E   .LKKWKWKKKKKKKKWKKKW   W.    D
+       W .LL j   KKKK;KK:KEKKKKKKK.  :.EKK,G
+       . j,D .   .KKKKKKEKWKKK;KK          t
+        K K       .KiKKKWKKWKKDK        G K
+         D          WKKKKKKjKKW; .      :;
+          ;    f               :E.  t   ti
+          t,       K  .j   i;  ;W       t
+            K.    E   K.K  ;i   GK.   Di
+             W.   K   K K  WE  ..K   W.
+            . K. K.    :G  G.W  WK.:K
+                K;    WE.  KD.   jK
+                  EK.   .   . ;WE
+                     .fKKKWDj.
+
+                   姓名：梁志煊
+                   学号：2014190130
+</pre>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/emojione/1.5.2/assets/sprites/emojione.sprites.css">
+    <link rel="stylesheet" type="text/css" href="css/emojionearea.min.css">
+    <link rel="stylesheet" type="text/css" href="css/emojionearea.min.css">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link href="images/logo.jpg" type="image/x-icon" rel="shortcut icon">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/1.5.2/lib/js/emojione.min.js"></script>
+    <script src="js/emojionearea.min.js"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    <title>留言板</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body ng-app="myApp">
+
+<div class="ui first modal">
+    <div class="header">回复：</div>
+    <div class="content">
+
+        <div class="centered ui ten wide column">
+            <form class="ui form">
+                <div class="field">
+                    <input id="parentid" name="parentid" type="text"
+                           style="display:none;">
+                </div>
+                <div class="field">
+                    <textarea id="mycontent2" name="mycontent"></textarea>
+                </div>
+
+                <div id="mysubmit" class="ui submit primary button">提交</div>
+                <div class="ui error message"></div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<!--下面是导航栏-->
+<div class="ui massive borderless menu" style="box-shadow: none;margin-top: 0px;">
+    <img class="ui image" src="images/logo.jpg" style="height: 73px;width: 73px;padding: 13px;">
+    </img>
+    <span class="item">
+        欢迎来到我的留言板
+    </span>
+    <div class="right menu">
+        <a href="#" class="item">首页</a>
+        <a href="#" class="item">排行榜</a>
+        <a href="#" class="item">注册</a>
+        <a href="#" class="item">登录</a>
+
+        <div class="ui dropdown item">
+            Language <i class="dropdown icon"></i>
+            <div class="menu">
+                <a class="item">中文</a>
+                <a class="item">English</a>
+                <a class="item">Russian</a>
+                <a class="item">Spanish</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--下面是主体部分-->
+<div class="ui container" style="margin-top: 45px;">
+    <div class="ui grid row">
+        <div class="ui one wide column">
+
+        </div>
+        <div class="ui ten wide column">
+            <form class="ui form">
+                <div class="field">
+                    <label>请输入你的名字</label>
+                    <input name="name" type="text" value="">
+                </div>
+                <div class="field">
+                    <label>请输入你的邮箱</label>
+                    <input name="email" type="email">
+                </div>
+                <div class="field">
+                    <label>请输入留言的内容</label>
+                    <textarea id="mycontent" name="mycontent"></textarea>
+                </div>
+
+                <div class="ui submit primary button">提交</div>
+                <div class="ui error message"></div>
+
+            </form>
+            <div class="ui comments" style="margin-top: 20px;">
+                <h2 class="ui dividing header">访客留言</h2>
+                <div class="comment" id="1">
+                    <a class="avatar">
+                        <img class="ui circular image" src="images/logo.jpg">
+                    </a>
+                    <div class="content">
+                        <a class="author">Matt</a>
+                        <div class="metadata">
+                            <span class="date">Today at 5:42PM</span></div><div class="text">
+                        </div>
+                        <div class="text">
+                            How artistic!
+                        </div>
+                        <div class="actions">
+                            <a class="reply">Reply</a>
+                        </div>
+                    </div>
+                    <div class="comments">
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="images/logo.jpg">
+                            </a>
+                            <div class="content">
+                                <a class="author">Jenny Hess</a>
+                                <div class="metadata">
+                                    <span class="date">Just now</span>
+                                </div>
+                                <div class="text">
+                                    Elliot you are always so right :)
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">Reply</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="images/logo.jpg">
+                    </a>
+                    <div class="content">
+                        <a class="author">Elliot Fu</a>
+                        <div class="metadata">
+                            <span class="date">Yesterday at 12:30AM</span>
+                        </div>
+                        <div class="text">
+                            <p>This has been very useful for my research. Thanks as well!</p>
+                        </div>
+                        <div class="actions">
+                            <a class="reply">Reply</a>
+                        </div>
+                    </div>
+                    <div class="comments">
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="images/logo.jpg">
+                            </a>
+                            <div class="content">
+                                <a class="author">Jenny Hess</a>
+                                <div class="metadata">
+                                    <span class="date">Just now</span>
+                                </div>
+                                <div class="text">
+                                    Elliot you are always so right :)
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">Reply</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="images/logo.jpg">
+                    </a>
+                    <div class="content">
+                        <a class="author">Joe Henderson</a>
+                        <div class="metadata">
+                            <span class="date">5 days ago</span>
+                        </div>
+                        <div class="text">
+                            Dude, this is awesome. Thanks so much
+                        </div>
+                        <div class="actions">
+                            <a class="reply">Reply</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui four wide column">
+            <div style="background-color: white;padding-top: 20px;box-shadow: 0px 0px 8px #cecccc;">
+                <img class="ui centered circular image" src="myimage/square-image.png"
+                     style="width: 75px;height: 75px;">
+                <p class="centered center text" style="text-align: center;margin-top: 15px">告诉我们你的身份是什么</p>
+                <p class="centered center text" style="text-align: center;margin-top: 15px">上次登录：127.0.0.1</p>
+                <p class="centered center text" style="text-align: center;margin-top: 15px">本次登录：127.0.0.1</p>
+
+
+            </div>
+            <div class="ui" style="background-color: white;margin-top: 35px;box-shadow: 0px 0px 8px #cecccc;padding: 12px;">
+                <h4 class="header" style="padding-bottom:5px;border-bottom: 2px solid #ded5d5;">新的用户</h4>
+                <div class="ui feed" style="margin-top: 10px;margin-bottom: 10px;">
+                    <div class="event">
+
+                        <div class="">
+                            <img class="ui circular image" src="img/机长.jpg" style="width:50px;height:50px;">
+                        </div>
+                        <div class="content">
+
+                            <div class="summary" style="padding: 5px;padding-left: 8px;">
+                                <a>我不是周杰伦</a>
+                            </div>
+                            <div class="date" style="padding: 5px;padding-left: 8px;">
+                                5 minute ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr style="height:1px;border:none;border-top:1px dashed #e6dcdc;"/>
+                <div class="ui feed" style="margin-top: 10px;margin-bottom: 10px;">
+                    <div class="event">
+                        <div class="">
+                            <img class="ui circular image" src="img/head_img01.jpg" style="width:50px;height:50px;">
+                        </div>
+                        <div class="content">
+
+                            <div class="summary" style="padding: 5px;padding-left: 8px;">
+                                <a>我也不是周杰伦</a>
+                            </div>
+                            <div class="date" style="padding: 5px;padding-left: 8px;">
+                                3 days ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr style="height:1px;border:none;border-top:1px dashed #e6dcdc;"/>
+                <div class="ui feed" style="margin-top: 10px;margin-bottom: 10px;">
+                    <div class="event">
+                        <div class="">
+                            <img class="ui circular image" src="img/head_img01.jpg" style="width:50px;height:50px;">
+                        </div>
+                        <div class="content">
+
+                            <div class="summary" style="padding: 5px;padding-left: 8px;">
+                                <a>我也不是周杰伦</a>
+                            </div>
+                            <div class="date" style="padding: 5px;padding-left: 8px;">
+                                3 days ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr style="height:1px;border:none;border-top:1px dashed #e6dcdc;"/>
+                <div class="ui feed" style="margin-top: 10px;margin-bottom: 10px;">
+                    <div class="event">
+                        <div class="">
+                            <img class="ui circular image" src="img/head_img01.jpg" style="width:50px;height:50px;">
+                        </div>
+                        <div class="content">
+
+                            <div class="summary" style="padding: 5px;padding-left: 8px;">
+                                <a>我也不是周杰伦</a>
+                            </div>
+                            <div class="date" style="padding: 5px;padding-left: 8px;">
+                                3 days ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr style="height:1px;border:none;border-top:1px dashed #e6dcdc;"/>
+                <div class="ui feed" style="margin-top: 10px;margin-bottom: 10px;">
+                    <div class="event">
+                        <div class="">
+                            <img class="ui circular image" src="img/head_img01.jpg" style="width:50px;height:50px;">
+                        </div>
+                        <div class="content">
+
+                            <div class="summary" style="padding: 5px;padding-left: 8px;">
+                                <a>我也不是周杰伦</a>
+                            </div>
+                            <div class="date" style="padding: 5px;padding-left: 8px;">
+                                3 days ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr style="height:1px;border:none;border-top:1px dashed #e6dcdc;"/>
+                <div class="ui feed" style="margin-top: 10px;margin-bottom: 10px;">
+                    <div class="event">
+                        <div class="">
+                            <img class="ui circular image" src="img/head_img01.jpg" style="width:50px;height:50px;">
+                        </div>
+                        <div class="content">
+
+                            <div class="summary" style="padding: 5px;padding-left: 8px;">
+                                <a>我也不是周杰伦</a>
+                            </div>
+                            <div class="date" style="padding: 5px;padding-left: 8px;">
+                                3 days ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr style="height:1px;border:none;border-top:1px dashed #e6dcdc;"/>
+                <div class="ui feed" style="margin-top: 10px;margin-bottom: 10px;">
+                    <div class="event">
+                        <div class="">
+                            <img class="ui circular image" src="img/head_img01.jpg" style="width:50px;height:50px;">
+                        </div>
+                        <div class="content">
+
+                            <div class="summary" style="padding: 5px;padding-left: 8px;">
+                                <a>我也不是周杰伦</a>
+                            </div>
+                            <div class="date" style="padding: 5px;padding-left: 8px;">
+                                3 days ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr style="height:1px;border:none;border-top:1px dashed #e6dcdc;"/>
+                <div class="ui feed" style="margin-top: 10px;margin-bottom: 10px;">
+                    <div class="event">
+                        <div class="">
+                            <img class="ui circular image" src="img/head_img01.jpg" style="width:50px;height:50px;">
+                        </div>
+                        <div class="content">
+
+                            <div class="summary" style="padding: 5px;padding-left: 8px;">
+                                <a>我也不是周杰伦</a>
+                            </div>
+                            <div class="date" style="padding: 5px;padding-left: 8px;">
+                                3 days ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr style="height:1px;border:none;border-top:1px dashed #e6dcdc;"/>
+                <div class="ui feed" style="margin-top: 10px;margin-bottom: 10px;">
+                    <div class="event">
+                        <div class="">
+                            <img class="ui circular image" src="img/head_img01.jpg" style="width:50px;height:50px;">
+                        </div>
+                        <div class="content">
+
+                            <div class="summary" style="padding: 5px;padding-left: 8px;">
+                                <a>我也不是周杰伦</a>
+                            </div>
+                            <div class="date" style="padding: 5px;padding-left: 8px;">
+                                3 days ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr style="height:1px;border:none;border-top:1px dashed #e6dcdc;"/>
+                <div class="ui feed" style="margin-top: 10px;margin-bottom: 10px;">
+                    <div class="event">
+                        <div class="">
+                            <img class="ui circular image" src="img/head_img01.jpg" style="width:50px;height:50px;">
+                        </div>
+                        <div class="content">
+
+                            <div class="summary" style="padding: 5px;padding-left: 8px;">
+                                <a>我也不是周杰伦</a>
+                            </div>
+                            <div class="date" style="padding: 5px;padding-left: 8px;">
+                                3 days ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="ui one wide column">
+
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+   /* var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.userid="";
+        $scope.password="";
+        $scope.mygo=function(){
+            if ($scope.myForm.$valid) {
+                window.location.href='http://www.baidu.com';
+                console.log('执行了跳转');
+            }
+        }
+    });*/
+    $(document).ready(function(){
+        $('.ui.dropdown').dropdown({on: 'hover'});
+
+        $("#mycontent").emojioneArea({
+            // options
+            autoHideFilters: true
+
+        });
+
+
+        $(".reply").click("click",function () {
+            alert(html);
+            var html="<div class='comment'><a class='avatar'><img src='image/logo.jpg'></a><div class='content'><a class='author'>管理员："
+                    +"周饿极了"+"</a><div class='metadata'><span class='date'>"+"hdfh"+"</span></div><div class='text'>"+"fdgsdfg"+"</div></div></div>";
+            var parentid=1;
+            $(".comment[id='+parentid+']").append(html);
+            $('.ui.modal').modal({inverted: true}).modal('show');
+            $("#parentid").val("6666");
+            var parentid=1;
+
+        })
+
+        $('.ui.form')
+                .form({
+                    fields: {
+                        name: {
+                            identifier: 'name',
+                            rules: [
+                                {
+                                    type   : 'empty',
+                                    prompt : '请输入你的名字'
+                                }
+                            ]
+                        },
+                        mycontent: {
+                            identifier: 'mycontent',
+                            rules: [
+                                {
+                                    type   : 'empty',
+                                    prompt : '请输入留言内容'
+                                }
+                            ]
+                        },
+                        email: {
+                            identifier: 'email',
+                            rules: [
+                                {
+                                    type   : 'email',
+                                    prompt : '请输入邮箱和正确的格式'
+                                }
+                            ]
+                        }
+                    }
+                })
+        ;
+    });
+
+</script>
+</html>

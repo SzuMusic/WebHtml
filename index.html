@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<style type="text/css">
+	   h4{
+	   	  width: 50%;
+	   	  margin-left: 
+	   	  auto;margin-right: auto;
+	   }
+	</style>
+</head>
+<body ng-app="myApp">
+	 <div class="container-fluid" ng-controller="myCtrl">
+	 	   <div class="form-group" style="width: 50%;margin-left: auto;margin-right: auto;margin-top: 15px">
+	 	 	  <input ng-model="username" class="form-control" type="text" ></input>
+	 	 	  <button class="btn btn-primary" style="margin-top: 15px">提交</button>
+	 	   </div>
+		 	   <h4 ng-hide="username.length==0" style="width: 50%;margin-left: auto;margin-right: auto;">75675{{username}}</h4>
+	 	   <form class="form-group" name="myForm" style="width: 5}0%;margin-left: auto;margin-right: auto;margin-top: 15px">
+     	     <div class="form-group">
+      	    <input type="email" name="myAddress" ng-model="text" class="form-control" style="width: 50%;margin-left: auto;margin-right: auto;">
+						<span ng-show ="myForm.myAddress.$error.email" style="color:red;">不是一个合法的邮箱地址</span>
+         </div>
+         数量: <input class="form-control" type="number" ng-model="quantity" style="width: 50%;margin-left: auto;margin-right: auto;">
+         价格: <input  class="form-control" type="number" ng-model="price" style="width: 50%;margin-left: auto;margin-right: auto;">
+         <p>总价 = {{ (quantity * price) | currency:'￥' }}</p>
+        </form>
+        <h4>{{firstname|uppercase}}</h4>
+        <p><input type="text" ng-model="test"></p>
+			  <ul>
+           <li ng-repeat="x in names | filter:test">
+           {{ (x.name | uppercase) + ', ' + x.country }}
+           </li>
+        </ul>
+        <h4>{{myURL}}</h4>
+        <select class="form-control">
+          <option ng-repeat="x in names | filter:{name:'kobe'}">{{x.name | filter:kobe}}</option>
+        </select>
+	 </div>
+   
+ <!-- <div class="container-fluid" style="margin-top: auto;margin-bottom: auto;" ng-controller="myCtrl">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+        	 <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <label for="username" class="col-sm-2 control-label">学号：</label>
+                  <div class="col-sm-10">
+                <input type="email" class="form-control" id="username" placeholder="请输入你的学号">
+                </div>
+    </div>
+  <div class="form-group">
+    <label for="password" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="password" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="button" class="btn btn-default">Sign in</button>
+    </div>
+  </div>
+ </form> -->
+        </div>
+      </div>
+   </div>
+</body>
+<!-- <script type="text/javascript" src="js/mycontroller.js"></script> -->
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.username="";
+});
+</script>
+</html>
